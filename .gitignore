@@ -3,7 +3,25 @@
 *.tmp
 .idea/
 _book/
+format_report.txt
 *.swp
 *.edx
 .DS_Store
+
 node_modules/
+package-lock.json
+
+docker-compose.override.yml
+
+# Editor configs
+.obsidian/
+.vscode/
+
+.agent/
+__pycache__/
+
+# Check scripts
+check*.py
+find*.py
+fix*.py
+format*.py

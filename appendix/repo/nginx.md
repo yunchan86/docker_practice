@@ -1,10 +1,10 @@
-## [Nginx](https://store.docker.com/images/nginx/)
+## Nginx
 
 ### 基本信息
 
 [Nginx](https://en.wikipedia.org/wiki/Nginx) 是开源的高效的 Web 服务器实现，支持 HTTP、HTTPS、SMTP、POP3、IMAP 等协议。
 
-该仓库位于 https://store.docker.com/images/nginx/ ，提供了 Nginx 1.0 ~ 1.13.x 各个版本的镜像。
+该仓库位于 `https://hub.docker.com/_/nginx/`。具体可用版本以 Docker Hub 上的 tags 列表为准。
 
 ### 使用方法
 
@@ -16,7 +16,7 @@ $ docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d ngin
 
 用户也可以不使用这种映射方式，通过利用 Dockerfile 来直接将静态页面内容放到镜像中，内容为
 
-```bash
+```docker
 FROM nginx
 COPY static-html-directory /usr/share/nginx/html
 ```
@@ -34,12 +34,13 @@ $ docker run --name some-nginx -d some-content-nginx
 $ docker run --name some-nginx -d -p 8080:80 some-content-nginx
 ```
 
-Nginx的默认配置文件路径为 `/etc/nginx/nginx.conf`，可以通过映射它来使用本地的配置文件，例如
+Nginx 的默认配置文件路径为 `/etc/nginx/nginx.conf`，可以通过映射它来使用本地的配置文件，例如
 
 ```bash
 $ docker run -d \
     --name some-nginx \
-    -v /some/nginx.conf:/etc/nginx/nginx.conf:ro \
+    -p 8080:80 \
+    -v /path/nginx.conf:/etc/nginx/nginx.conf:ro \
     nginx
 ```
 

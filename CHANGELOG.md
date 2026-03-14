@@ -1,6 +1,63 @@
-## 主要修订记录
+# 修订记录
+
+* 1.6.1 2026-02-28
+  * 修正数据卷 `--mount` 与 `-v` 的行为差异及数据卷管理说明
+  * 补充 Docker Hub 限流机制说明，区分 pull rate limit 与 abuse rate limit
+  * 完善安全权限警告，强化用户加入 docker 组等同于 root 的风险意识
+  * 增补 Docker Engine v29 containerd image store 与 BuildKit provenance attestations 默认行为说明
+
+* 1.6.0 2026-02-20
+  * 全面统一使用 `docker compose` (V2) 为默认标准，提供 V1 迁移说明
+  * 修复全书大量排版错误，建立附录与正文的双向索引与引用
+  * 更新 Kubernetes 至 1.35 兼容说明及运行时环境提示
+
+* 1.5.4 2026-02-15
+  * 移除 combine.py
+  * 修复若干问题
+
+
+* 1.5.3 2026-02-15
+  * 修复 CI 流程中的图片引用路径错误
+  * 修复 CODEOWNERS 文件路径匹配问题
+  * 更新项目配置版本号
+
+* 1.5.0 2026-02-05
+  * 全面重构章节目录结构 (01-15)
+  * 支持 Docker Engine v29.x
+  * 优化文档图片引用路径
+
+* 1.4.0 2026-01-11
+  * 全面支持 Docker Engine v29 新版本
+  * 更新 Docker Compose 至 v2.40.x
+  * 更新 Kubernetes 相关章节至 1.35 版本
+  * BuildKit 已成为默认稳定构建器，移除实验特性说明
+  * 新增 Docker Scout、Docker Init 相关内容
+  * 更新镜像加速器配置
+  * 添加 CentOS EOL 警告，推荐使用 Rocky Linux/AlmaLinux
+  * 扩充安全章节和底层架构章节内容
+
+* 1.3.0 2021-12-31
+  * 全面支持 Docker v20.10 新版本
+  * 新增 Docker Compose v2
+  * Docker Hub 自动构建转为付费功能
+
+* 1.2.0 2020-12-20
+  * 错误修复
+
+* 1.1.0 2019-12-31
+  * 全面支持 Docker v19.03 新版本
+  * 增加 `BuildKit`
+  * 增加 `docker buildx` 命令使用说明
+  * 增加 `docker manifest` 命令使用说明
+  * 移除 `Ubuntu 14.04` `Debian 8` `Debian 7`
+
+* 1.0.0: 2018-12-31
+  * 全面支持 Docker v18.x 新版本
+  * 添加如何调试 Docker
+  * 错误修正
 
 * 0.9.0: 2017-12-31
+  * 对 v1.13.x 旧版本的最后支持
 
 * 0.9.0-rc2: 2017-12-10
 
@@ -13,7 +70,7 @@
   * 更新 `CoreOS` 章节
   * 更新 `etcd` 章节，基于 3.x 版本
 
-  * 删除 `Docker Compose` 中的 `links`指令
+  * 删除 `Docker Compose` 中的 `links` 指令
 
   * 替换 `docker daemon` 命令为 `dockerd`
   * 替换 `docker ps` 命令为 `docker container ls`
@@ -25,13 +82,13 @@
   * 优化文字排版
   * 调整目录结构
   * 修复内容逻辑错误
-  * 修复`404` 链接
+  * 修复 `404` 链接
 
 * 0.9.0-rc1: 2017-11-29
 
-  * 根据最新版本（v17.09）修订内容
+  * 根据最新版本 (v17.09) 修订内容
 
-  * 增加 `Dockerfile` 多阶段构建( `multistage builds` ) `Docker 17.05` 新增特性
+  * 增加 `Dockerfile` 多阶段构建 (`multistage builds`) `Docker 17.05` 新增特性
   * 增加 `docker exec` 子命令介绍
   * 增加 `docker` 管理子命令 `container` `image` `network` `volume` 介绍
   * 增加 `树莓派单片电脑` 安装 Docker
@@ -56,7 +113,7 @@
 * 0.8.0: 2017-01-08
 
   * 修正文字内容
-  * 根据最新版本（1.12）修订安装使用
+  * 根据最新版本 (1.12) 修订安装使用
   * 补充附录章节
 
 * 0.7.0: 2016-06-12
